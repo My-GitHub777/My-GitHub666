@@ -1,0 +1,21 @@
+server:
+  port: 9092
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot_test
+    username: root
+    password: root
+  application:
+    name: user-service
+mybatis:
+  type-aliases-package: com.itcast.user.pojo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka,http://localhost:10087/eureka #如果两台都可用就都注册，如果其中一台不可用就注册到另一台
+  instance:
+    ip-address: 127.0.0.1
+    prefer-ip-address: true #共倾向于使用Ip地址而不是主机名
+    lease-renewal-interval-in-seconds: 30  #默认30秒续约一次
+    lease-expiration-duration-in-seconds: 90 #如果90秒还没续约默认服务失效
