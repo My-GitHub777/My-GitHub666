@@ -20,5 +20,5 @@ eureka:
     lease-renewal-interval-in-seconds: 30  #默认30秒续约一次
     lease-expiration-duration-in-seconds: 90 #如果90秒还没续约默认服务失效te
 test:
-  name: chuanzhi
+  name: heima
     
